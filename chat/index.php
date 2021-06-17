@@ -23,14 +23,33 @@ if(isset($_POST['enter'])){
  
 function loginForm(){
     echo
-    '<div id="loginform">
-    <p>Please enter your name to continue!</p>
-    <form action="index.php" method="post">
-      <label for="name">Name &mdash;</label>
-      <input type="text" name="name" id="name" />
-      <input type="submit" name="enter" id="enter" value="Enter" />
-    </form>
-  </div>';
+    '<div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    MIRACLE
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form action="index.php" method="post">
+                            <div class="form-group">
+                                <label class="form-control-label" for="name">USERNAME &mdash;</label>
+                                <input type="text" name="name" id="name" class="form-control" />
+                            </div>
+                            <div>
+                            <input type="submit" name="enter" id="enter" value="Enter" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>';
 }
  
 ?>
@@ -40,8 +59,8 @@ function loginForm(){
     <head>
         <meta charset="utf-8" />
  
-        <title>Tuts+ Chat Application</title>
-        <meta name="description" content="Tuts+ Chat Application" />
+        <title>Miracle | Chat</title>
+        <meta name="description" content="Miracle chat application" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
