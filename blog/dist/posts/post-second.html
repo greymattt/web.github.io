@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>First post</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../index.html">MYWEBSITE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/post2/bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>OSI Model</h1>
+                            <h2 class="subheading">Networking basics | OSI Model Stack</h2>
+                            <span class="meta">
+                                Posted by Aravind on 4:25 AM, June 16, 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>
+                            <p style="color: #51AAAF; font-size: 30px;">The OSI (Open Systems Interconnection)</p>
+                              
+                                7. Application Layer<br>
+                                6. Presentation Layer<br>
+                                5. Session Layer<br>
+                                4. Transport Layer<br>
+                                3. Network Layer<br>
+                                2. Data Link Layer<br>
+                                1. Physical Layer<br>
+                            </ol>
+
+                            <p style="color: #95CAD8;">7. APPLICATION LAYER</p>
+                            This layer basically provides an interface for the application to transmit the data. The data is being passed to the presentation layer.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">6. PRESENTATION LAYER</p>
+                            The presentation layer translates the data into a standardised format and all the encryption, compression and other forms of transformations to the data takes place in this layer. Once the transformations are completed the data is being passed over to session layer.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">5. SESSION LAYER</p>
+                            The session layer manages the connection being made with the remote application. This layer checks if a session can be created with the remote application. If the session cannot be made it sends back an error. If the session can be created the this layer creates the session and maintains it. It also makes sure the connection is unique. When the session is created the data is passed down to the transport layer.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">4. TRANSPORT LAYER</p>
+                            The main function of transport layer is to choose over which protocol the data is to be transmitted. The two common protocols would be <i>TCP (TRANSMISSION CONTROL PROTOCOL)</i> and <i>UDP (USER DATAGRAM PROTOCOL)</i>. TCP is a connection-based protocol, a connection is made between two computers in order to send the data packets to the other. A TCP connection ensures to remains in contant communication until the duration of the request and any lost data is re-sent. Now coming to UDP, it is the exact opposite of TCP. UDP throws the data packets to the receiving computer without any confirmation or connection. There is no connection being made from the local to remote computer. If the data is lost, the data will not be re-sent. The UDP is mostly used for speed, for example in video streaming. The TCP is choosed when accuracy is important, for example in file transfers. With a protocol selected the data packets are divided into bite-sized pieces. In UDP it is called as <i>DATAGRAM</i> and in TCP it is <i>SEGMENTS</i>.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">3. NETWORK LAYER</p>
+                            Network layer is used to determines the best route for the data packet to travel. For instance if a website is being entered in the browser the network layer gets IP address of the site and decides the best route to take. This is where logical addressing comes in. A logical address lets you access a network device by using an address that you assign. Currently most common addressing is IPV4 format.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">2. DATA LINK</p>
+                            The data link layer is focused on physical addressing of the transmission. It receives packets from network layer which contains the IP of the endpoint, the data link layer adds in the MAC address of the endpoint computer. The data link layer also makes sure the data isn't been corrupted during the transmission.
+                            <br>
+                            <br>
+                            <p style="color: #95CAD8;">1. PHYSICAL LAYER</p>
+                            The physical layer consists of the hardware components. This is where the electrical pulses that make up data transfer over a network are sent and received. It converts the binary data of transmission into signals and transmits over to the remote computer and also receives the incoming signals and converting them into binary data.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/greymatt10/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.github.com/greymattt">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

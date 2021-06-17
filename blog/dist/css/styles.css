@@ -130,6 +130,16 @@ p {
   margin-bottom: 1rem;
 }
 
+
+table, td,
+th {
+  padding: 10px;
+  border: 2px solid #1c87c9;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
 abbr[title],
 abbr[data-bs-original-title] {
   -webkit-text-decoration: underline dotted;
